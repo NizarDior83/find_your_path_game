@@ -1,0 +1,103 @@
+name: find_your_path
+description: Find Your Path — hidden object game.
+version: 1.0.0+1
+publish_to: 'none'
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  vector_math: ^2.2.0
+  video_player: ^2.8.1
+  shared_preferences: ^2.2.3
+  audioplayers: ^6.0.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/videos/
+    - assets/images/
+    # Sprite manifest — uncomment each entry once the PNG is dropped into
+    # assets/images/. Explicit entries produce a build-time error if missing,
+    # acting as a checklist for the developer.
+    - assets/images/sprite_boomerang.png
+    - assets/images/sprite_scarab.png
+    - assets/images/sprite_quill.png
+    - assets/images/sprite_key.png
+    - assets/images/sprite_gecko.png
+    - assets/images/ui_panel.png
+    - assets/images/icon_heart.png
+    - assets/images/icon_hint.png
+    - assets/images/icon_found_checkmark.png
+    - assets/images/sparkle_effect.gif
+    - assets/images/thumb_boomerang.png
+    - assets/images/thumb_scarab.png
+    - assets/images/thumb_quill.png
+    - assets/images/thumb_key.png
+    - assets/images/thumb_gecko.png
+    - assets/images/icon_loop.png
+    - assets/images/level2_bg.png
+    - assets/images/sprite_potion.png
+    - assets/images/sprite_crystal.png
+    - assets/images/sprite_mortar.png
+    - assets/images/sprite_herbs.png
+    - assets/images/sprite_hat.png
+    - assets/images/thumb_potion.png
+    - assets/images/thumb_crystal.png
+    - assets/images/thumb_mortar.png
+    - assets/images/thumb_herbs.png
+    - assets/images/thumb_hat.png
+    - assets/images/level3_bg.png
+    - assets/images/sprite_conductor_hat.png
+    - assets/images/sprite_bell.png
+    - assets/images/sprite_pocket_watch.png
+    - assets/images/sprite_satchel.png
+    - assets/images/sprite_lantern.png
+    - assets/images/thumb_conductor_hat.png
+    - assets/images/thumb_bell.png
+    - assets/images/thumb_pocket_watch.png
+    - assets/images/thumb_satchel.png
+    - assets/images/thumb_lantern.png
+    - assets/images/level4_bg.png
+    - assets/images/sprite_perfume.png
+    - assets/images/sprite_mirror.png
+    - assets/images/sprite_necklace.png
+    - assets/images/sprite_bow.png
+    - assets/images/sprite_compact.png
+    - assets/images/thumb_perfume.png
+    - assets/images/thumb_mirror.png
+    - assets/images/thumb_necklace.png
+    - assets/images/thumb_bow.png
+    - assets/images/thumb_compact.png
+    - assets/images/level5_bg.png
+    - assets/images/sprite_acorn.png
+    - assets/images/sprite_flute.png
+    - assets/images/sprite_leaf_cup.png
+    - assets/images/sprite_snail.png
+    - assets/images/sprite_moth.png
+    - assets/images/thumb_acorn.png
+    - assets/images/thumb_flute.png
+    - assets/images/thumb_leaf_cup.png
+    - assets/images/thumb_snail.png
+    - assets/images/thumb_moth.png
+    - assets/images/icon_level_1.png
+    - assets/images/icon_level_2.png
+    - assets/images/icon_level_3.png
+    - assets/images/icon_level_4.png
+    - assets/images/icon_level_5.png
+    - assets/images/icon_home.png
+    - assets/images/icon_settings.png
+    - assets/audio/intro_music.mp3
+    - assets/audio/gameplay_music.mp3
+    - assets/audio/sound_sprite_tap.mp3
+    - assets/audio/sound_sparkle.mp3
+    - assets/audio/sound_win.mp3
+    - assets/audio/sound_lose.mp3
+    - assets/audio/sound_level_complete.mp3
