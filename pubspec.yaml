@@ -87,6 +87,61 @@ flutter:
     - assets/images/thumb_leaf_cup.png
     - assets/images/thumb_snail.png
     - assets/images/thumb_moth.png
+    # P5.5 — new Level 1 items
+    - assets/images/sprite_compass.png
+    - assets/images/sprite_map.png
+    - assets/images/sprite_fossil.png
+    - assets/images/sprite_journal.png
+    - assets/images/sprite_binoculars.png
+    - assets/images/thumb_compass.png
+    - assets/images/thumb_map.png
+    - assets/images/thumb_fossil.png
+    - assets/images/thumb_journal.png
+    - assets/images/thumb_binoculars.png
+    # P5.5 — new Level 2 items
+    - assets/images/sprite_candle.png
+    - assets/images/sprite_scale.png
+    - assets/images/sprite_tarot.png
+    - assets/images/sprite_wand.png
+    - assets/images/sprite_sage.png
+    - assets/images/thumb_candle.png
+    - assets/images/thumb_scale.png
+    - assets/images/thumb_tarot.png
+    - assets/images/thumb_wand.png
+    - assets/images/thumb_sage.png
+    # P5.5 — new Level 3 items
+    - assets/images/sprite_ticket.png
+    - assets/images/sprite_wrench.png
+    - assets/images/sprite_whistle.png
+    - assets/images/sprite_nest.png
+    - assets/images/sprite_coin.png
+    - assets/images/thumb_ticket.png
+    - assets/images/thumb_wrench.png
+    - assets/images/thumb_whistle.png
+    - assets/images/thumb_nest.png
+    - assets/images/thumb_coin.png
+    # P5.5 — new Level 4 items
+    - assets/images/sprite_hairbrush.png
+    - assets/images/sprite_pearl.png
+    - assets/images/sprite_slipper.png
+    - assets/images/sprite_musicbox.png
+    - assets/images/sprite_teacup.png
+    - assets/images/thumb_hairbrush.png
+    - assets/images/thumb_pearl.png
+    - assets/images/thumb_slipper.png
+    - assets/images/thumb_musicbox.png
+    - assets/images/thumb_teacup.png
+    # P5.5 — new Level 5 items
+    - assets/images/sprite_berry.png
+    - assets/images/sprite_fairywing.png
+    - assets/images/sprite_crystal_shard.png
+    - assets/images/sprite_pinecone.png
+    - assets/images/sprite_dewdrop.png
+    - assets/images/thumb_berry.png
+    - assets/images/thumb_fairywing.png
+    - assets/images/thumb_crystal_shard.png
+    - assets/images/thumb_pinecone.png
+    - assets/images/thumb_dewdrop.png
     - assets/images/icon_level_1.png
     - assets/images/icon_level_2.png
     - assets/images/icon_level_3.png
