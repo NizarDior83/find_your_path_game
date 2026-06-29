@@ -29,8 +29,8 @@ class _GameScreenState extends State<GameScreen> with TickerProviderStateMixin {
   final MagicMoveController _magicMove = MagicMoveController();
   final GlobalKey _interactiveViewerKey = GlobalKey();
   
-  // Create 5 GlobalKeys to track the positions of the 5 inventory slots
-  final List<GlobalKey> _slotKeys = List.generate(5, (_) => GlobalKey());
+  // GlobalKeys to track the positions of inventory slots (one per object)
+  late final List<GlobalKey> _slotKeys;
   
   // Track found objects and temporarily hidden objects (while flying)
   final Set<String> _foundIds = {};
@@ -83,6 +83,7 @@ class _GameScreenState extends State<GameScreen> with TickerProviderStateMixin {
   @override
   void initState() {
     super.initState();
+    _slotKeys = List.generate(_currentLevelObjects.length, (_) => GlobalKey());
     _magicMoveController = AnimationController(
       vsync: this,
       duration: const Duration(milliseconds: 800),
