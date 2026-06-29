@@ -43,56 +43,62 @@ class BottomPanel extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                // Top row: inventory slots
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: List.generate(objects.length, (index) {
-                    final obj = objects[index];
-                    final isFound = foundIds.contains(obj.id);
-                    
-                    return Padding(
-                      padding: EdgeInsets.only(
-                          right: index < objects.length - 1 ? 8.0 : 0.0),
-                      child: Container(
-                        key: slotKeys[index],
-                        width: 48,
-                        height: 48,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(8.0),
-                          border: Border.all(
-                            color: Colors.white.withValues(alpha: 0.2),
-                            width: 1.0,
-                          ),
-                        ),
-                        child: Stack(
-                          alignment: Alignment.center,
-                          children: [
-                            Opacity(
-                              opacity: isFound ? 1.0 : 0.4,
-                              child: Image.asset(
-                                obj.thumbnailPath,
-                                fit: BoxFit.contain,
-                                errorBuilder: (context, error, stackTrace) =>
-                                    const SizedBox.shrink(),
+                // Top row: inventory slots (scrollable)
+                ScrollConfiguration(
+                  behavior: ScrollConfiguration.of(context).copyWith(scrollbars: false),
+                  child: SingleChildScrollView(
+                    scrollDirection: Axis.horizontal,
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: List.generate(objects.length, (index) {
+                        final obj = objects[index];
+                        final isFound = foundIds.contains(obj.id);
+                        
+                        return Padding(
+                          padding: EdgeInsets.only(
+                              right: index < objects.length - 1 ? 8.0 : 0.0),
+                          child: Container(
+                            key: slotKeys[index],
+                            width: 48,
+                            height: 48,
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(8.0),
+                              border: Border.all(
+                                color: Colors.white.withValues(alpha: 0.2),
+                                width: 1.0,
                               ),
                             ),
-                            if (isFound)
-                              Positioned(
-                                bottom: 2,
-                                right: 2,
-                                child: Image.asset(
-                                  'assets/images/icon_found_checkmark.png',
-                                  width: 16,
-                                  height: 16,
-                                  errorBuilder: (context, error, stackTrace) =>
-                                      const SizedBox.shrink(),
+                            child: Stack(
+                              alignment: Alignment.center,
+                              children: [
+                                Opacity(
+                                  opacity: isFound ? 1.0 : 0.4,
+                                  child: Image.asset(
+                                    obj.thumbnailPath,
+                                    fit: BoxFit.contain,
+                                    errorBuilder: (context, error, stackTrace) =>
+                                        const SizedBox.shrink(),
+                                  ),
                                 ),
-                              ),
-                          ],
-                        ),
-                      ),
-                    );
-                  }),
+                                if (isFound)
+                                  Positioned(
+                                    bottom: 2,
+                                    right: 2,
+                                    child: Image.asset(
+                                      'assets/images/icon_found_checkmark.png',
+                                      width: 16,
+                                      height: 16,
+                                      errorBuilder: (context, error, stackTrace) =>
+                                          const SizedBox.shrink(),
+                                    ),
+                                  ),
+                              ],
+                            ),
+                          ),
+                        );
+                      }),
+                    ),
+                  ),
                 ),
                 
                 // Bottom row: home, counter, lives, hint
