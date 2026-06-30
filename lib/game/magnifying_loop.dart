@@ -56,10 +56,8 @@ class MagnifyingLoop extends StatelessWidget {
                   height: lensDiameter,
                   child: ClipRect(
                     child: Transform(
-                      transform: Matrix4.identity()
-                        ..translate(lensRadius, lensRadius)
-                        ..scale(kLoopZoomFactor)
-                        ..translate(-clampedX, -clampedY),
+                      transform: _buildLensTransform(
+                        lensRadius, kLoopZoomFactor, clampedX, clampedY),
                       child: SizedBox(
                         width: canvasWidth,
                         height: canvasHeight,
@@ -109,4 +107,22 @@ class MagnifyingLoop extends StatelessWidget {
       ),
     );
   }
+}
+
+/// Builds the combined transform: translate(lensRadius) → scale(zoom) → translate(-center).
+/// Avoids deprecated Matrix4.translate/scale methods.
+Matrix4 _buildLensTransform(
+    double lensRadius, double zoom, double cx, double cy) {
+  // Result = T(lensRadius, lensRadius) * S(zoom) * T(-cx, -cy)
+  // Combined into a single Matrix4:
+  //   [ zoom,  0,    0,  lensRadius - zoom * cx ]
+  //   [ 0,     zoom, 0,  lensRadius - zoom * cy ]
+  //   [ 0,     0,    1,  0                      ]
+  //   [ 0,     0,    0,  1                      ]
+  return Matrix4(
+    zoom, 0, 0, 0, //
+    0, zoom, 0, 0, //
+    0, 0, 1, 0, //
+    lensRadius - zoom * cx, lensRadius - zoom * cy, 0, 1, //
+  );
 }
