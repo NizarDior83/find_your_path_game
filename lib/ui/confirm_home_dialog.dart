@@ -75,8 +75,9 @@ class _ConfirmHomeDialogState extends State<ConfirmHomeDialog> {
                       'Return to Menu?',
                       textAlign: TextAlign.center,
                       style: TextStyle(
+                        fontFamily: 'Cinzel',
                         color: Colors.white,
-                        fontSize: 22,
+                        fontSize: 19,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
@@ -117,7 +118,8 @@ class _ConfirmHomeDialogState extends State<ConfirmHomeDialog> {
                               child: const Text(
                                 'Cancel',
                                 style: TextStyle(
-                                  fontSize: 14,
+                                  fontFamily: 'Cinzel',
+                                  fontSize: 12,
                                   fontWeight: FontWeight.bold,
                                 ),
                               ),
@@ -141,7 +143,8 @@ class _ConfirmHomeDialogState extends State<ConfirmHomeDialog> {
                               child: const Text(
                                 'Return to Menu',
                                 style: TextStyle(
-                                  fontSize: 14,
+                                  fontFamily: 'Cinzel',
+                                  fontSize: 12,
                                   fontWeight: FontWeight.bold,
                                 ),
                               ),

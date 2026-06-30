@@ -1,26 +1,110 @@
 import 'package:flutter/material.dart';
+import 'object_data.dart';
 
-/// A pure visual widget representing a magnifying loop cursor.
+/// Zoom factor used by the magnifying lens.
+const double kLoopZoomFactor = 1.5;
+
+/// A magnifying-loop cursor that renders a circular, clipped, 1.5x-zoomed
+/// view of the canvas content (background + unfound sprites), with edge
+/// clamping so the zoomed view never shows blank space beyond canvas bounds.
+/// The original icon_loop.png frame is rendered on top so the glass border
+/// looks unchanged.
 class MagnifyingLoop extends StatelessWidget {
   final Offset position;
+  final double canvasWidth;
+  final double canvasHeight;
+  final String backgroundAsset;
+  final List<HiddenObject> visibleObjects;
 
   const MagnifyingLoop({
     super.key,
     required this.position,
+    required this.canvasWidth,
+    required this.canvasHeight,
+    required this.backgroundAsset,
+    required this.visibleObjects,
   });
 
   @override
   Widget build(BuildContext context) {
-    // The image is 80x80. Center it precisely over the pointer position.
+    const double lensDiameter = 80;
+    const double lensRadius = lensDiameter / 2; // 40
+    const double windowRadius = (lensDiameter / kLoopZoomFactor) / 2; // ≈26.67
+
+    // Clamp the effective zoom center so zoomed content never shows blank space.
+    // Guard against very small canvas sizes.
+    final double clampedX = canvasWidth > windowRadius * 2
+        ? position.dx.clamp(windowRadius, canvasWidth - windowRadius)
+        : canvasWidth / 2;
+    final double clampedY = canvasHeight > windowRadius * 2
+        ? position.dy.clamp(windowRadius, canvasHeight - windowRadius)
+        : canvasHeight / 2;
+
     return Positioned(
-      left: position.dx - 40,
-      top: position.dy - 40,
+      left: position.dx - lensRadius,
+      top: position.dy - lensRadius,
       child: IgnorePointer(
-        child: Image.asset(
-          'assets/images/icon_loop.png',
-          width: 80,
-          height: 80,
-          errorBuilder: (context, error, stackTrace) => const SizedBox.shrink(),
+        child: SizedBox(
+          width: lensDiameter,
+          height: lensDiameter,
+          child: Stack(
+            children: [
+              // Zoomed canvas content
+              ClipOval(
+                child: SizedBox(
+                  width: lensDiameter,
+                  height: lensDiameter,
+                  child: ClipRect(
+                    child: Transform(
+                      transform: Matrix4.identity()
+                        ..translate(lensRadius, lensRadius)
+                        ..scale(kLoopZoomFactor)
+                        ..translate(-clampedX, -clampedY),
+                      child: SizedBox(
+                        width: canvasWidth,
+                        height: canvasHeight,
+                        child: Stack(
+                          children: [
+                            Image.asset(
+                              backgroundAsset,
+                              fit: BoxFit.cover,
+                              width: canvasWidth,
+                              height: canvasHeight,
+                              errorBuilder: (context, error, stackTrace) =>
+                                  const SizedBox.shrink(),
+                            ),
+                            for (final obj in visibleObjects)
+                              Positioned(
+                                left: obj.xPercent * canvasWidth,
+                                top: obj.yPercent * canvasHeight,
+                                width: obj.widthPercent * canvasWidth,
+                                child: FractionalTranslation(
+                                  translation: const Offset(-0.5, -0.5),
+                                  child: Image.asset(
+                                    obj.assetPath,
+                                    errorBuilder:
+                                        (context, error, stackTrace) =>
+                                            const SizedBox.shrink(),
+                                  ),
+                                ),
+                              ),
+                          ],
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+              // Frame overlay — icon_loop.png on top
+              Image.asset(
+                'assets/images/icon_loop.png',
+                width: lensDiameter,
+                height: lensDiameter,
+                errorBuilder: (context, error, stackTrace) =>
+                    const SizedBox.shrink(),
+              ),
+            ],
+          ),
         ),
       ),
     );

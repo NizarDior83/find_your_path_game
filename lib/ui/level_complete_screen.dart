@@ -74,8 +74,9 @@ class _LevelCompleteScreenState extends State<LevelCompleteScreen> {
                     titleText,
                     textAlign: TextAlign.center,
                     style: const TextStyle(
+                      fontFamily: 'Cinzel',
                       color: Colors.white,
-                      fontSize: 32,
+                      fontSize: 29,
                       fontWeight: FontWeight.bold,
                       shadows: [
                         Shadow(
@@ -116,7 +117,8 @@ class _LevelCompleteScreenState extends State<LevelCompleteScreen> {
                       child: const Text(
                         'Try Again',
                         style: TextStyle(
-                          fontSize: 16,
+                          fontFamily: 'Cinzel',
+                          fontSize: 14,
                           fontWeight: FontWeight.bold,
                         ),
                       ),
@@ -141,7 +143,8 @@ class _LevelCompleteScreenState extends State<LevelCompleteScreen> {
                         child: const Text(
                           'Next Level',
                           style: TextStyle(
-                            fontSize: 16,
+                            fontFamily: 'Cinzel',
+                            fontSize: 14,
                             fontWeight: FontWeight.bold,
                           ),
                         ),
@@ -171,7 +174,8 @@ class _LevelCompleteScreenState extends State<LevelCompleteScreen> {
                       child: const Text(
                         'Home',
                         style: TextStyle(
-                          fontSize: 16,
+                          fontFamily: 'Cinzel',
+                          fontSize: 14,
                           fontWeight: FontWeight.bold,
                         ),
                       ),

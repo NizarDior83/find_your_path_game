@@ -21,7 +21,8 @@ class LoseScreen extends StatelessWidget {
             const Text(
               'OUT OF LIVES',
               style: TextStyle(
-                fontSize: 32,
+                fontFamily: 'Cinzel',
+                fontSize: 29,
                 fontWeight: FontWeight.bold,
                 color: Colors.redAccent,
                 letterSpacing: 2,
@@ -34,7 +35,7 @@ class LoseScreen extends StatelessWidget {
                 backgroundColor: Colors.redAccent,
                 foregroundColor: Colors.white,
                 padding: const EdgeInsets.symmetric(horizontal: 48, vertical: 16),
-                textStyle: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                textStyle: const TextStyle(fontFamily: 'Cinzel', fontSize: 18, fontWeight: FontWeight.bold),
               ),
               child: const Text('TRY AGAIN'),
             ),

@@ -296,7 +296,16 @@ class _GameScreenState extends State<GameScreen> with TickerProviderStateMixin {
 
           // ── Overlay: Magnifying Loop Cursor ───────────────────────────────
           if (_cursorPosition != null && !_isGameOver)
-            MagnifyingLoop(position: _cursorPosition!),
+            MagnifyingLoop(
+              position: _cursorPosition!,
+              canvasWidth: _canvasWidth,
+              canvasHeight: _canvasHeight,
+              backgroundAsset: getBackgroundAssetForLevel(widget.levelNumber),
+              visibleObjects: _currentLevelObjects
+                  .where((obj) =>
+                      !_foundIds.contains(obj.id) && !_hiddenIds.contains(obj.id))
+                  .toList(),
+            ),
 
           // ── Overlay: Sparkle Effect ───────────────────────────────────────
           if (_showSparkle && _sparklePos != null)

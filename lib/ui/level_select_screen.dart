@@ -17,9 +17,20 @@ class LevelSelectScreen extends StatelessWidget {
     });
 
     return Scaffold(
-      backgroundColor: const Color(0xFF1A1A1A),
-      body: SafeArea(
-        child: Stack(
+      backgroundColor: Colors.transparent,
+      body: Container(
+        decoration: const BoxDecoration(
+          gradient: LinearGradient(
+            begin: Alignment.topCenter,
+            end: Alignment.bottomCenter,
+            colors: [
+              Color(0xFF6B4423),
+              Color(0xFF1F0F05),
+            ],
+          ),
+        ),
+        child: SafeArea(
+          child: Stack(
           children: [
             // Main content column
             Column(
@@ -31,8 +42,9 @@ class LevelSelectScreen extends StatelessWidget {
                     child: Text(
                       'Choose Your Adventure',
                       style: TextStyle(
+                        fontFamily: 'Cinzel',
                         color: Colors.white,
-                        fontSize: 24,
+                        fontSize: 21,
                         fontWeight: FontWeight.bold,
                         shadows: const [
                           Shadow(
@@ -56,6 +68,8 @@ class LevelSelectScreen extends StatelessWidget {
                           if (n < kTotalLevels) const SizedBox(height: 16),
                         ],
                         const SizedBox(height: 16),
+                        const _ComingSoonCard(),
+                        const SizedBox(height: 16),
                       ],
                     ),
                   ),
@@ -76,19 +90,20 @@ class LevelSelectScreen extends StatelessWidget {
                 },
                 icon: Image.asset(
                   'assets/images/icon_settings.png',
-                  width: 32,
-                  height: 32,
+                  width: 40,
+                  height: 40,
                   errorBuilder: (context, error, stackTrace) {
                     return const Icon(
                       Icons.settings,
                       color: Colors.white,
-                      size: 28,
+                      size: 36,
                     );
                   },
                 ),
               ),
             ),
-          ],
+            ],
+          ),
         ),
       ),
     );
@@ -138,8 +153,9 @@ class _LevelCard extends StatelessWidget {
                     child: Text(
                       '$levelNumber',
                       style: const TextStyle(
+                        fontFamily: 'Cinzel',
                         color: Color(0xFFE8C46A),
-                        fontSize: 28,
+                        fontSize: 24,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
@@ -157,8 +173,9 @@ class _LevelCard extends StatelessWidget {
                   Text(
                     'Level $levelNumber',
                     style: const TextStyle(
+                      fontFamily: 'Cinzel',
                       color: Color(0xFFE8C46A),
-                      fontSize: 14,
+                      fontSize: 12,
                       fontWeight: FontWeight.bold,
                     ),
                   ),
@@ -166,8 +183,9 @@ class _LevelCard extends StatelessWidget {
                   Text(
                     getLevelNameForLevel(levelNumber),
                     style: TextStyle(
+                      fontFamily: 'Cinzel',
                       color: Colors.white.withValues(alpha: 0.9),
-                      fontSize: 18,
+                      fontSize: 16,
                       fontWeight: FontWeight.w500,
                     ),
                     overflow: TextOverflow.ellipsis,
@@ -203,6 +221,74 @@ class _LevelCard extends StatelessWidget {
             }
           : null,
       child: cardContent,
+    );
+  }
+}
+
+class _ComingSoonCard extends StatelessWidget {
+  const _ComingSoonCard();
+
+  @override
+  Widget build(BuildContext context) {
+    return Opacity(
+      opacity: 0.4,
+      child: Container(
+        height: 96,
+        decoration: BoxDecoration(
+          color: const Color(0xFF2A2520),
+          borderRadius: BorderRadius.circular(16),
+          border: Border.all(
+            color: Colors.white.withValues(alpha: 0.08),
+            width: 1,
+          ),
+        ),
+        padding: const EdgeInsets.all(16),
+        child: Row(
+          children: [
+            // Sparkle icon (instead of a level icon)
+            const SizedBox(
+              width: 64,
+              height: 64,
+              child: Icon(
+                Icons.auto_awesome,
+                size: 48,
+                color: Color(0xFFE8C46A),
+              ),
+            ),
+            const SizedBox(width: 16),
+            // Label
+            Expanded(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  const Text(
+                    'Coming Soon',
+                    style: TextStyle(
+                      fontFamily: 'Cinzel',
+                      color: Color(0xFFE8C46A),
+                      fontSize: 12,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  const SizedBox(height: 4),
+                  Text(
+                    'More Adventures Await',
+                    style: TextStyle(
+                      fontFamily: 'Cinzel',
+                      color: Colors.white.withValues(alpha: 0.9),
+                      fontSize: 16,
+                      fontWeight: FontWeight.w500,
+                    ),
+                    overflow: TextOverflow.ellipsis,
+                  ),
+                ],
+              ),
+            ),
+            // No chevron — card is not tappable
+          ],
+        ),
+      ),
     );
   }
 }

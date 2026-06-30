@@ -109,15 +109,15 @@ class BottomPanel extends StatelessWidget {
                     GestureDetector(
                       onTap: onHomePressed,
                       child: SizedBox(
-                        width: 32,
-                        height: 32,
+                        width: 40,
+                        height: 40,
                         child: Image.asset(
                           'assets/images/icon_home.png',
-                          width: 32,
-                          height: 32,
+                          width: 40,
+                          height: 40,
                           fit: BoxFit.contain,
                           errorBuilder: (context, error, stackTrace) =>
-                              const Icon(Icons.home, color: Colors.white, size: 24),
+                              const Icon(Icons.home, color: Colors.white, size: 36),
                         ),
                       ),
                     ),
@@ -126,8 +126,9 @@ class BottomPanel extends StatelessWidget {
                     Text(
                       '${foundIds.length} / ${objects.length}',
                       style: const TextStyle(
+                        fontFamily: 'Cinzel',
                         color: Colors.white,
-                        fontSize: 14,
+                        fontSize: 12,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
@@ -143,8 +144,8 @@ class BottomPanel extends StatelessWidget {
                             opacity: isAlive ? 1.0 : 0.25,
                             child: Image.asset(
                               'assets/images/icon_heart.png',
-                              width: 24,
-                              height: 24,
+                              width: 28,
+                              height: 28,
                               errorBuilder: (context, error, stackTrace) =>
                                   const SizedBox.shrink(),
                             ),
@@ -158,8 +159,8 @@ class BottomPanel extends StatelessWidget {
                       onTap: onHintPressed,
                       child: Image.asset(
                         'assets/images/icon_hint.png',
-                        width: 32,
-                        height: 32,
+                        width: 40,
+                        height: 40,
                         errorBuilder: (context, error, stackTrace) =>
                             const SizedBox.shrink(),
                       ),

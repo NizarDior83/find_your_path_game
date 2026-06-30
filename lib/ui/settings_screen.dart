@@ -35,8 +35,9 @@ class _SettingsScreenState extends State<SettingsScreen> {
                       child: Text(
                         'Settings',
                         style: TextStyle(
+                          fontFamily: 'Cinzel',
                           color: Colors.white,
-                          fontSize: 22,
+                          fontSize: 19,
                           fontWeight: FontWeight.bold,
                         ),
                       ),
@@ -57,8 +58,9 @@ class _SettingsScreenState extends State<SettingsScreen> {
                   const Text(
                     'Music',
                     style: TextStyle(
+                      fontFamily: 'Cinzel',
                       color: Color(0xFFE8C46A),
-                      fontSize: 16,
+                      fontSize: 14,
                       fontWeight: FontWeight.bold,
                     ),
                   ),
@@ -91,8 +93,9 @@ class _SettingsScreenState extends State<SettingsScreen> {
                         child: Text(
                           '${(musicVol * 100).round()}%',
                           style: TextStyle(
+                            fontFamily: 'Cinzel',
                             color: Colors.white.withValues(alpha: 0.9),
-                            fontSize: 14,
+                            fontSize: 12,
                           ),
                         ),
                       ),
@@ -105,8 +108,9 @@ class _SettingsScreenState extends State<SettingsScreen> {
                   const Text(
                     'Sound Effects',
                     style: TextStyle(
+                      fontFamily: 'Cinzel',
                       color: Color(0xFFE8C46A),
-                      fontSize: 16,
+                      fontSize: 14,
                       fontWeight: FontWeight.bold,
                     ),
                   ),
@@ -141,8 +145,9 @@ class _SettingsScreenState extends State<SettingsScreen> {
                         child: Text(
                           '${(sfxVol * 100).round()}%',
                           style: TextStyle(
+                            fontFamily: 'Cinzel',
                             color: Colors.white.withValues(alpha: 0.9),
-                            fontSize: 14,
+                            fontSize: 12,
                           ),
                         ),
                       ),
