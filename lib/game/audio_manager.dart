@@ -3,7 +3,12 @@ import 'package:flutter/foundation.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class AudioManager {
-  AudioManager._privateConstructor();
+  AudioManager._privateConstructor() {
+    AudioPlayer.global.setAudioContext(AudioContextConfig(
+      respectSilence: true,
+      focus: AudioContextConfigFocus.mixWithOthers,
+    ).build());
+  }
   static final AudioManager instance = AudioManager._privateConstructor();
 
   final AudioPlayer _musicPlayer = AudioPlayer();
