@@ -43,7 +43,7 @@ const Map<int, List<HiddenObject>> kLevelObjects = {
       assetPath: 'assets/images/sprite_boomerang.png',
       xPercent: 0.305,
       yPercent: 0.404,
-      widthPercent: 0.20,
+      widthPercent: 0.24,
       thumbnailPath: 'assets/images/thumb_boomerang.png',
     ),
     HiddenObject(
@@ -52,7 +52,7 @@ const Map<int, List<HiddenObject>> kLevelObjects = {
       assetPath: 'assets/images/sprite_scarab.png',
       xPercent: 0.878,
       yPercent: 0.105,
-      widthPercent: 0.16,
+      widthPercent: 0.20,
       thumbnailPath: 'assets/images/thumb_scarab.png',
     ),
     HiddenObject(
@@ -61,7 +61,7 @@ const Map<int, List<HiddenObject>> kLevelObjects = {
       assetPath: 'assets/images/sprite_quill.png',
       xPercent: 0.313,
       yPercent: 0.720,
-      widthPercent: 0.16,
+      widthPercent: 0.20,
       thumbnailPath: 'assets/images/thumb_quill.png',
     ),
     HiddenObject(
@@ -70,7 +70,7 @@ const Map<int, List<HiddenObject>> kLevelObjects = {
       assetPath: 'assets/images/sprite_key.png',
       xPercent: 0.232,
       yPercent: 0.220,
-      widthPercent: 0.14,
+      widthPercent: 0.18,
       thumbnailPath: 'assets/images/thumb_key.png',
     ),
     HiddenObject(
@@ -79,7 +79,7 @@ const Map<int, List<HiddenObject>> kLevelObjects = {
       assetPath: 'assets/images/sprite_gecko.png',
       xPercent: 0.091,
       yPercent: 0.448,
-      widthPercent: 0.16,
+      widthPercent: 0.20,
       thumbnailPath: 'assets/images/thumb_gecko.png',
     ),
     HiddenObject(
@@ -88,7 +88,7 @@ const Map<int, List<HiddenObject>> kLevelObjects = {
       assetPath: 'assets/images/sprite_compass.png',
       xPercent: 0.859,
       yPercent: 0.580,
-      widthPercent: 0.14,
+      widthPercent: 0.18,
       thumbnailPath: 'assets/images/thumb_compass.png',
     ),
     HiddenObject(
@@ -97,7 +97,7 @@ const Map<int, List<HiddenObject>> kLevelObjects = {
       assetPath: 'assets/images/sprite_map.png',
       xPercent: 0.470,
       yPercent: 0.761,
-      widthPercent: 0.13,
+      widthPercent: 0.17,
       thumbnailPath: 'assets/images/thumb_map.png',
     ),
     HiddenObject(
@@ -106,7 +106,7 @@ const Map<int, List<HiddenObject>> kLevelObjects = {
       assetPath: 'assets/images/sprite_fossil.png',
       xPercent: 0.921,
       yPercent: 0.471,
-      widthPercent: 0.10,
+      widthPercent: 0.14,
       thumbnailPath: 'assets/images/thumb_fossil.png',
     ),
     HiddenObject(
@@ -115,7 +115,7 @@ const Map<int, List<HiddenObject>> kLevelObjects = {
       assetPath: 'assets/images/sprite_journal.png',
       xPercent: 0.073,
       yPercent: 0.364,
-      widthPercent: 0.13,
+      widthPercent: 0.17,
       thumbnailPath: 'assets/images/thumb_journal.png',
     ),
     HiddenObject(
@@ -124,7 +124,7 @@ const Map<int, List<HiddenObject>> kLevelObjects = {
       assetPath: 'assets/images/sprite_binoculars.png',
       xPercent: 0.737,
       yPercent: 0.514,
-      widthPercent: 0.14,
+      widthPercent: 0.18,
       thumbnailPath: 'assets/images/thumb_binoculars.png',
     ),
   ],
@@ -135,7 +135,7 @@ const Map<int, List<HiddenObject>> kLevelObjects = {
       assetPath: 'assets/images/sprite_potion.png',
       xPercent: 0.836,
       yPercent: 0.348,
-      widthPercent: 0.08,
+      widthPercent: 0.12,
       thumbnailPath: 'assets/images/thumb_potion.png',
     ),
     HiddenObject(
@@ -144,7 +144,7 @@ const Map<int, List<HiddenObject>> kLevelObjects = {
       assetPath: 'assets/images/sprite_crystal.png',
       xPercent: 0.206,
       yPercent: 0.577,
-      widthPercent: 0.10,
+      widthPercent: 0.14,
       thumbnailPath: 'assets/images/thumb_crystal.png',
     ),
     HiddenObject(
@@ -153,7 +153,7 @@ const Map<int, List<HiddenObject>> kLevelObjects = {
       assetPath: 'assets/images/sprite_mortar.png',
       xPercent: 0.490,
       yPercent: 0.214,
-      widthPercent: 0.10,
+      widthPercent: 0.14,
       thumbnailPath: 'assets/images/thumb_mortar.png',
     ),
     HiddenObject(
@@ -162,7 +162,7 @@ const Map<int, List<HiddenObject>> kLevelObjects = {
       assetPath: 'assets/images/sprite_herbs.png',
       xPercent: 0.792,
       yPercent: 0.621,
-      widthPercent: 0.08,
+      widthPercent: 0.12,
       thumbnailPath: 'assets/images/thumb_herbs.png',
     ),
     HiddenObject(
@@ -171,7 +171,7 @@ const Map<int, List<HiddenObject>> kLevelObjects = {
       assetPath: 'assets/images/sprite_hat.png',
       xPercent: 0.548,
       yPercent: 0.792,
-      widthPercent: 0.10,
+      widthPercent: 0.14,
       thumbnailPath: 'assets/images/thumb_hat.png',
     ),
     HiddenObject(
@@ -180,7 +180,7 @@ const Map<int, List<HiddenObject>> kLevelObjects = {
       assetPath: 'assets/images/sprite_candle.png',
       xPercent: 0.130,
       yPercent: 0.721,
-      widthPercent: 0.07,
+      widthPercent: 0.11,
       thumbnailPath: 'assets/images/thumb_candle.png',
     ),
     HiddenObject(
@@ -189,7 +189,7 @@ const Map<int, List<HiddenObject>> kLevelObjects = {
       assetPath: 'assets/images/sprite_scale.png',
       xPercent: 0.843,
       yPercent: 0.779,
-      widthPercent: 0.12,
+      widthPercent: 0.16,
       thumbnailPath: 'assets/images/thumb_scale.png',
     ),
     HiddenObject(
@@ -198,7 +198,7 @@ const Map<int, List<HiddenObject>> kLevelObjects = {
       assetPath: 'assets/images/sprite_tarot.png',
       xPercent: 0.092,
       yPercent: 0.308,
-      widthPercent: 0.09,
+      widthPercent: 0.13,
       thumbnailPath: 'assets/images/thumb_tarot.png',
     ),
     HiddenObject(
@@ -207,7 +207,7 @@ const Map<int, List<HiddenObject>> kLevelObjects = {
       assetPath: 'assets/images/sprite_wand.png',
       xPercent: 0.473,
       yPercent: 0.412,
-      widthPercent: 0.13,
+      widthPercent: 0.17,
       thumbnailPath: 'assets/images/thumb_wand.png',
     ),
     HiddenObject(
@@ -216,7 +216,7 @@ const Map<int, List<HiddenObject>> kLevelObjects = {
       assetPath: 'assets/images/sprite_sage.png',
       xPercent: 0.819,
       yPercent: 0.189,
-      widthPercent: 0.09,
+      widthPercent: 0.13,
       thumbnailPath: 'assets/images/thumb_sage.png',
     ),
   ],
@@ -227,7 +227,7 @@ const Map<int, List<HiddenObject>> kLevelObjects = {
       assetPath: 'assets/images/sprite_conductor_hat.png',
       xPercent: 0.746,
       yPercent: 0.599,
-      widthPercent: 0.10,
+      widthPercent: 0.14,
       thumbnailPath: 'assets/images/thumb_conductor_hat.png',
     ),
     HiddenObject(
@@ -236,7 +236,7 @@ const Map<int, List<HiddenObject>> kLevelObjects = {
       assetPath: 'assets/images/sprite_bell.png',
       xPercent: 0.462,
       yPercent: 0.419,
-      widthPercent: 0.08,
+      widthPercent: 0.12,
       thumbnailPath: 'assets/images/thumb_bell.png',
     ),
     HiddenObject(
@@ -245,7 +245,7 @@ const Map<int, List<HiddenObject>> kLevelObjects = {
       assetPath: 'assets/images/sprite_pocket_watch.png',
       xPercent: 0.154,
       yPercent: 0.760,
-      widthPercent: 0.06,
+      widthPercent: 0.10,
       thumbnailPath: 'assets/images/thumb_pocket_watch.png',
     ),
     HiddenObject(
@@ -254,7 +254,7 @@ const Map<int, List<HiddenObject>> kLevelObjects = {
       assetPath: 'assets/images/sprite_satchel.png',
       xPercent: 0.988,
       yPercent: 0.590,
-      widthPercent: 0.12,
+      widthPercent: 0.16,
       thumbnailPath: 'assets/images/thumb_satchel.png',
     ),
     HiddenObject(
@@ -263,7 +263,7 @@ const Map<int, List<HiddenObject>> kLevelObjects = {
       assetPath: 'assets/images/sprite_lantern.png',
       xPercent: 0.122,
       yPercent: 0.480,
-      widthPercent: 0.08,
+      widthPercent: 0.12,
       thumbnailPath: 'assets/images/thumb_lantern.png',
     ),
     HiddenObject(
@@ -272,7 +272,7 @@ const Map<int, List<HiddenObject>> kLevelObjects = {
       assetPath: 'assets/images/sprite_ticket.png',
       xPercent: 0.596,
       yPercent: 0.599,
-      widthPercent: 0.08,
+      widthPercent: 0.12,
       thumbnailPath: 'assets/images/thumb_ticket.png',
     ),
     HiddenObject(
@@ -281,7 +281,7 @@ const Map<int, List<HiddenObject>> kLevelObjects = {
       assetPath: 'assets/images/sprite_wrench.png',
       xPercent: 0.367,
       yPercent: 0.674,
-      widthPercent: 0.14,
+      widthPercent: 0.18,
       thumbnailPath: 'assets/images/thumb_wrench.png',
     ),
     HiddenObject(
@@ -290,7 +290,7 @@ const Map<int, List<HiddenObject>> kLevelObjects = {
       assetPath: 'assets/images/sprite_whistle.png',
       xPercent: 0.466,
       yPercent: 0.770,
-      widthPercent: 0.07,
+      widthPercent: 0.11,
       thumbnailPath: 'assets/images/thumb_whistle.png',
     ),
     HiddenObject(
@@ -299,7 +299,7 @@ const Map<int, List<HiddenObject>> kLevelObjects = {
       assetPath: 'assets/images/sprite_nest.png',
       xPercent: 0.227,
       yPercent: 0.148,
-      widthPercent: 0.12,
+      widthPercent: 0.16,
       thumbnailPath: 'assets/images/thumb_nest.png',
     ),
     HiddenObject(
@@ -308,7 +308,7 @@ const Map<int, List<HiddenObject>> kLevelObjects = {
       assetPath: 'assets/images/sprite_coin.png',
       xPercent: 0.907,
       yPercent: 0.754,
-      widthPercent: 0.08,
+      widthPercent: 0.12,
       thumbnailPath: 'assets/images/thumb_coin.png',
     ),
   ],
@@ -319,7 +319,7 @@ const Map<int, List<HiddenObject>> kLevelObjects = {
       assetPath: 'assets/images/sprite_perfume.png',
       xPercent: 0.311,
       yPercent: 0.341,
-      widthPercent: 0.07,
+      widthPercent: 0.11,
       thumbnailPath: 'assets/images/thumb_perfume.png',
     ),
     HiddenObject(
@@ -328,7 +328,7 @@ const Map<int, List<HiddenObject>> kLevelObjects = {
       assetPath: 'assets/images/sprite_mirror.png',
       xPercent: 0.292,
       yPercent: 0.550,
-      widthPercent: 0.10,
+      widthPercent: 0.14,
       thumbnailPath: 'assets/images/thumb_mirror.png',
     ),
     HiddenObject(
@@ -337,7 +337,7 @@ const Map<int, List<HiddenObject>> kLevelObjects = {
       assetPath: 'assets/images/sprite_necklace.png',
       xPercent: 0.023,
       yPercent: 0.217,
-      widthPercent: 0.10,
+      widthPercent: 0.14,
       thumbnailPath: 'assets/images/thumb_necklace.png',
     ),
     HiddenObject(
@@ -346,7 +346,7 @@ const Map<int, List<HiddenObject>> kLevelObjects = {
       assetPath: 'assets/images/sprite_bow.png',
       xPercent: 0.887,
       yPercent: 0.437,
-      widthPercent: 0.07,
+      widthPercent: 0.11,
       thumbnailPath: 'assets/images/thumb_bow.png',
     ),
     HiddenObject(
@@ -355,7 +355,7 @@ const Map<int, List<HiddenObject>> kLevelObjects = {
       assetPath: 'assets/images/sprite_compact.png',
       xPercent: 0.151,
       yPercent: 0.743,
-      widthPercent: 0.08,
+      widthPercent: 0.12,
       thumbnailPath: 'assets/images/thumb_compact.png',
     ),
     HiddenObject(
@@ -364,7 +364,7 @@ const Map<int, List<HiddenObject>> kLevelObjects = {
       assetPath: 'assets/images/sprite_hairbrush.png',
       xPercent: 0.374,
       yPercent: 0.807,
-      widthPercent: 0.12,
+      widthPercent: 0.16,
       thumbnailPath: 'assets/images/thumb_hairbrush.png',
     ),
     HiddenObject(
@@ -373,7 +373,7 @@ const Map<int, List<HiddenObject>> kLevelObjects = {
       assetPath: 'assets/images/sprite_pearl.png',
       xPercent: 0.113,
       yPercent: 0.395,
-      widthPercent: 0.08,
+      widthPercent: 0.12,
       thumbnailPath: 'assets/images/thumb_pearl.png',
     ),
     HiddenObject(
@@ -382,7 +382,7 @@ const Map<int, List<HiddenObject>> kLevelObjects = {
       assetPath: 'assets/images/sprite_slipper.png',
       xPercent: 0.663,
       yPercent: 0.510,
-      widthPercent: 0.13,
+      widthPercent: 0.17,
       thumbnailPath: 'assets/images/thumb_slipper.png',
     ),
     HiddenObject(
@@ -391,7 +391,7 @@ const Map<int, List<HiddenObject>> kLevelObjects = {
       assetPath: 'assets/images/sprite_musicbox.png',
       xPercent: 0.716,
       yPercent: 0.692,
-      widthPercent: 0.13,
+      widthPercent: 0.17,
       thumbnailPath: 'assets/images/thumb_musicbox.png',
     ),
     HiddenObject(
@@ -400,7 +400,7 @@ const Map<int, List<HiddenObject>> kLevelObjects = {
       assetPath: 'assets/images/sprite_teacup.png',
       xPercent: 0.059,
       yPercent: 0.348,
-      widthPercent: 0.10,
+      widthPercent: 0.14,
       thumbnailPath: 'assets/images/thumb_teacup.png',
     ),
   ],
@@ -411,7 +411,7 @@ const Map<int, List<HiddenObject>> kLevelObjects = {
       assetPath: 'assets/images/sprite_acorn.png',
       xPercent: 0.878,
       yPercent: 0.078,
-      widthPercent: 0.06,
+      widthPercent: 0.10,
       thumbnailPath: 'assets/images/thumb_acorn.png',
     ),
     HiddenObject(
@@ -420,7 +420,7 @@ const Map<int, List<HiddenObject>> kLevelObjects = {
       assetPath: 'assets/images/sprite_flute.png',
       xPercent: 0.332,
       yPercent: 0.590,
-      widthPercent: 0.10,
+      widthPercent: 0.14,
       thumbnailPath: 'assets/images/thumb_flute.png',
     ),
     HiddenObject(
@@ -429,7 +429,7 @@ const Map<int, List<HiddenObject>> kLevelObjects = {
       assetPath: 'assets/images/sprite_leaf_cup.png',
       xPercent: 0.821,
       yPercent: 0.488,
-      widthPercent: 0.08,
+      widthPercent: 0.12,
       thumbnailPath: 'assets/images/thumb_leaf_cup.png',
     ),
     HiddenObject(
@@ -438,7 +438,7 @@ const Map<int, List<HiddenObject>> kLevelObjects = {
       assetPath: 'assets/images/sprite_snail.png',
       xPercent: 0.353,
       yPercent: 0.262,
-      widthPercent: 0.07,
+      widthPercent: 0.11,
       thumbnailPath: 'assets/images/thumb_snail.png',
     ),
     HiddenObject(
@@ -447,7 +447,7 @@ const Map<int, List<HiddenObject>> kLevelObjects = {
       assetPath: 'assets/images/sprite_moth.png',
       xPercent: 0.092,
       yPercent: 0.106,
-      widthPercent: 0.10,
+      widthPercent: 0.14,
       thumbnailPath: 'assets/images/thumb_moth.png',
     ),
     HiddenObject(
@@ -456,7 +456,7 @@ const Map<int, List<HiddenObject>> kLevelObjects = {
       assetPath: 'assets/images/sprite_berry.png',
       xPercent: 0.460,
       yPercent: 0.680,
-      widthPercent: 0.07,
+      widthPercent: 0.11,
       thumbnailPath: 'assets/images/thumb_berry.png',
     ),
     HiddenObject(
@@ -465,7 +465,7 @@ const Map<int, List<HiddenObject>> kLevelObjects = {
       assetPath: 'assets/images/sprite_fairywing.png',
       xPercent: 0.626,
       yPercent: 0.164,
-      widthPercent: 0.13,
+      widthPercent: 0.17,
       thumbnailPath: 'assets/images/thumb_fairywing.png',
     ),
     HiddenObject(
@@ -474,7 +474,7 @@ const Map<int, List<HiddenObject>> kLevelObjects = {
       assetPath: 'assets/images/sprite_crystal_shard.png',
       xPercent: 0.935,
       yPercent: 0.623,
-      widthPercent: 0.10,
+      widthPercent: 0.14,
       thumbnailPath: 'assets/images/thumb_crystal_shard.png',
     ),
     HiddenObject(
@@ -483,7 +483,7 @@ const Map<int, List<HiddenObject>> kLevelObjects = {
       assetPath: 'assets/images/sprite_pinecone.png',
       xPercent: 0.107,
       yPercent: 0.071,
-      widthPercent: 0.10,
+      widthPercent: 0.14,
       thumbnailPath: 'assets/images/thumb_pinecone.png',
     ),
     HiddenObject(
@@ -492,7 +492,7 @@ const Map<int, List<HiddenObject>> kLevelObjects = {
       assetPath: 'assets/images/sprite_dewdrop.png',
       xPercent: 0.154,
       yPercent: 0.650,
-      widthPercent: 0.09,
+      widthPercent: 0.13,
       thumbnailPath: 'assets/images/thumb_dewdrop.png',
     ),
   ],
