@@ -109,15 +109,15 @@ class BottomPanel extends StatelessWidget {
                     GestureDetector(
                       onTap: onHomePressed,
                       child: SizedBox(
-                        width: 40,
-                        height: 40,
+                        width: 52,
+                        height: 52,
                         child: Image.asset(
                           'assets/images/icon_home.png',
-                          width: 40,
-                          height: 40,
+                          width: 52,
+                          height: 52,
                           fit: BoxFit.contain,
                           errorBuilder: (context, error, stackTrace) =>
-                              const Icon(Icons.home, color: Colors.white, size: 36),
+                              const Icon(Icons.home, color: Colors.white, size: 44),
                         ),
                       ),
                     ),
@@ -127,8 +127,8 @@ class BottomPanel extends StatelessWidget {
                       '${foundIds.length} / ${objects.length}',
                       style: const TextStyle(
                         fontFamily: 'Cinzel',
-                        color: Colors.white,
-                        fontSize: 12,
+                        color: Color(0xFF2A1A0A),
+                        fontSize: 18,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
@@ -159,8 +159,8 @@ class BottomPanel extends StatelessWidget {
                       onTap: onHintPressed,
                       child: Image.asset(
                         'assets/images/icon_hint.png',
-                        width: 40,
-                        height: 40,
+                        width: 52,
+                        height: 52,
                         errorBuilder: (context, error, stackTrace) =>
                             const SizedBox.shrink(),
                       ),
