@@ -56,8 +56,7 @@ class MagnifyingLoop extends StatelessWidget {
                   height: lensDiameter,
                   child: ClipRect(
                     child: Transform(
-                      transform: _buildLensTransform(
-                        lensRadius, kLoopZoomFactor, clampedX, clampedY),
+                      transform: Matrix4.diagonal3Values(3.0, 3.0, 1.0),
                       child: SizedBox(
                         width: canvasWidth,
                         height: canvasHeight,

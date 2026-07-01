@@ -43,22 +43,31 @@ class _IntroScreenState extends State<IntroScreen> {
     super.initState();
 
     // Platform-aware video loading (preserved from Stage 1 fixes).
+    // mixWithOthers is CRITICAL: it prevents ExoPlayer from requesting audio focus.
+    // Without this, starting AudioManager music right after will steal focus and pause the video.
+    final options = VideoPlayerOptions(mixWithOthers: true);
     _controller = kIsWeb
-        ? VideoPlayerController.networkUrl(Uri.parse('intro.mp4'))
-        : VideoPlayerController.asset('assets/videos/intro.mp4');
+        ? VideoPlayerController.networkUrl(Uri.parse('intro.mp4'), videoPlayerOptions: options)
+        : VideoPlayerController.asset('assets/videos/intro.mp4', videoPlayerOptions: options);
 
     _controller.initialize().then((_) {
       if (!mounted) return;
-      // Mute is required for Chrome autoplay policy.
+      // Mute is required for Chrome autoplay policy and to ensure it doesn't output sound.
       _controller.setVolume(0.0);
       _controller.addListener(_onVideoTick);
-      _controller.play();
 
       // Start intro music (will fail silently on web if autoplay is blocked)
       AudioManager.instance.playMusic(AudioManager.introMusic, loop: true);
 
       setState(() {
         _videoReady = true;
+      });
+
+      // Defer play() until after the VideoPlayer widget is mounted
+      WidgetsBinding.instance.addPostFrameCallback((_) {
+        if (mounted) {
+          _controller.play();
+        }
       });
     }).catchError((Object error) {
       // Video missing or failed to load — the Play button IS the failsafe.
